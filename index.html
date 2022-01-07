@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css 3d Effect Image Gallery</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+         .box{
+            position: relative;
+            border-radius: 20px;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: animate 20s linear infinite;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes animate{
+            0%{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100%{
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .box span{
+            position: absolute;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            width: 310px;
+            height: 310px;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004)
+            
+
+        }
+
+        .box span img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <span style="--i:1"> <img src="nature.jpeg"></span> -->
+        <span style="--i:1;"> <img src="waterfall.jpg"></span>
+        <span style="--i:3;"> <img src="tree.jpeg"></span>
+        <span style="--i:4;"> <img src="water.jpg"></span>
+        <span style="--i:5;"> <img src="forest.jpg"></span>
+        <span style="--i:6;"> <img src="flowers.jpg"></span>
+        <span style="--i:7;;"> <img src="lake.jpg"></span>
+        <span style="--i:8;"> <video controls height="310" width="310" autoplay ><source src="😊cute😍_couple😘_romantic_Neck_kiss_💋_status__lifeline_status_love_status(1080p).mp4"></video></span>
+        <span style="--i:9;"> <img src="plants.jpg"></span>
+        <span style="--i:10;"> <img src="river.jpg"></span>
+        <span style="--i:11;"> <img src="white rose.jpg"></span>
+        <span style="--i:12;"> <img src="flowers.jpg"></span>
+        <span style="--i:13;"> <img src="birds.jpg"></span>
+
+    </div>
+    
+</body>
+</html>
